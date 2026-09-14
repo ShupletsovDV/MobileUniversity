@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.mobileapp.ui.theme.MobileAppTheme
 
@@ -36,4 +37,12 @@ fun DemoText(message: String, fontSize: Float) {
         fontSize = fontSize.sp,
         fontWeight = FontWeight.Bold
     )
+}
+
+@Preview
+@Composable
+fun DemoTextPreview() {
+    MobileAppTheme {
+        DemoText(message = "Welcome to Android", fontSize = 12f)
+    }
 }
